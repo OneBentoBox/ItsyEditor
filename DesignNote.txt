@@ -3,6 +3,7 @@ Design Note for Isty Editor:
 Jquery
  
 .position()  will return the coordinate number if the element is absolute/relative position to its parent.
+
 .offset() will return the coordinate relative to the window (upper left corner)
 
 .offset() is extraly what I need for coordinate of the targeted line.
