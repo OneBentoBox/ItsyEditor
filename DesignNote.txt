@@ -1,0 +1,59 @@
+Design Note:
+
+Jquery
+ 
+.position()  will return the coordinate number if the element is absolute/relative position to its parent.
+.offset() will return the coordinate relative to the window (upper left corner)
+
+.offset() is extraly what I need for coordinate of the targeted line.
+
+Note: one black space has width of "4px"
+
+
+Editor Features:
+1) Save/Edit option.
+    Edit will trigger a AJAX/REST call to server to "lock" the content from others to edit.
+    Save will update the content in server and allow others to edit.
+
+2) Enter will create a new line
+3) Line is in a "line div"
+4) Paragraph is in a "paragraph div"
+5)
+
+Future fetures:
+1) Support image insertion with "paste" action.
+2) Detect user pasta action and retrieve the "link" or "image" binary.
+    Link: Process the link to retrieve the binary
+3) Image sits inside <img> tag.
+4) TBD if allowing just one <img> per line or more <img> per line.
+
+
+Editor View:
+
+    Init with a target Div to insert the editor view
+    Setup event notification for:
+        clicking in the editor view
+            which will trigger key capturing for further processing
+        clicking outside of the editor view for stopping key captures
+        Note: These are for observator(subscriber) to listen for.
+    
+    MouseCursor? Should be part of View
+        Location of mouse click
+        Calculate where the cursor should appear
+        
+        export one Mouse Cursor Object.
+        expose the following API:
+           moveCursorHere()
+           blinkCusor(frequency)
+           hideCursor()
+           showCursor()
+           returnCursorLocation()
+           
+           
+
+GIT Repository
+
+3 STATES:
+    1) Modified  -- Users-modified codes that was previously checked out from Git
+    2) Staged  --  Staged (modified) files ready for commit
+    3) Commited   --  Version of codes on Git 
