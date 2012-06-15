@@ -1,4 +1,4 @@
-Design Note:
+Design Note for Isty Editor:
 
 Jquery
  
